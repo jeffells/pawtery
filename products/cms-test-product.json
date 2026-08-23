@@ -1,0 +1,10 @@
+{
+  "visible": false,
+  "order": 99,
+  "photo": "/uploads/pawtery-test-image.jpg",
+  "name": "CMS Test Product",
+  "price": "$1",
+  "snippet": "Temporary CMS test",
+  "story": "This is a temporary product used to test the Pawtery admin system.",
+  "details_text": "Test detail"
+}
