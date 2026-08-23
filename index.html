@@ -676,7 +676,7 @@ async function loadEvents() {
 
     const upcoming = (Array.isArray(data.events) ? data.events : [])
       .map(event => ({ ...event, parsedDate: parseEventDate(event.date) }))
-      .filter(event => event.parsedDate && event.parsedDate >= today)
+      .filter(event => event.visible !== false && event.parsedDate && event.parsedDate >= today)
       .sort((a, b) => a.parsedDate - b.parsedDate);
 
     if (!upcoming.length) return;
