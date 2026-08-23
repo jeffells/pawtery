@@ -11,68 +11,84 @@ public_folder: "/uploads"
 collections:
   - name: "products"
     label: "Products"
-    folder: "products"
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Product Name", name: "name", widget: "string", hint: "e.g. Personalized Dog Bowl" }
-      - { label: "Price", name: "price", widget: "string", hint: "e.g. From $25" }
-      - { label: "Price Note", name: "price_note", widget: "string", required: false, hint: "e.g. · price varies by size" }
-      - label: "Badge"
-        name: "badge"
-        widget: "select"
-        options:
-          - { label: "⭐ Bestseller", value: "⭐ Bestseller" }
-          - { label: "☕ Popular", value: "☕ Popular" }
-          - { label: "🎁 Gift Favorite", value: "🎁 Gift Favorite" }
-          - { label: "🐱 For Cats", value: "🐱 For Cats" }
-          - { label: "🐕 Big Dogs", value: "🐕 Big Dogs" }
-          - { label: "☕ Mug Shot", value: "☕ Mug Shot" }
-          - { label: "🐈 Cat Person", value: "🐈 Cat Person" }
-          - { label: "✏️ Custom", value: "✏️ Custom" }
-          - { label: "🎁 Gift Idea", value: "🎁 Gift Idea" }
-        required: false
-      - { label: "Product Photo", name: "photo", widget: "image", hint: "Upload a square photo for best results" }
-      - { label: "Short Description (shown on card)", name: "snippet", widget: "string", hint: "One short sentence shown under the product name" }
-      - { label: "Story (shown in popup)", name: "story", widget: "text", hint: "Write this in first person — 2-3 sentences about this piece" }
-      - label: "Details"
-        name: "details"
-        widget: "list"
-        summary: "{{fields.text}}"
-        field: { label: "Detail line", name: "text", widget: "string", hint: "e.g. Food safe, dishwasher safe, kiln-fired" }
-      - label: "Visible on site"
-        name: "visible"
-        widget: "boolean"
-        default: true
-      - label: "Sort Order"
-        name: "order"
-        widget: "number"
-        default: 99
-        hint: "Lower number = shows first (1 shows before 2)"
+    files:
+      - label: "Product Catalog"
+        name: "catalog"
+        file: "data/products.json"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.name}}"
+            default: []
+            fields:
+              - { label: "Product Name", name: "name", widget: "string", hint: "e.g. Personalized Dog Bowl" }
+              - { label: "Price", name: "price", widget: "string", hint: "Enter exactly how the price should display, e.g. From $25 or Price Varies" }
+              - { label: "Price Note", name: "price_note", widget: "string", required: false, hint: "Optional smaller note, e.g. · price varies by size" }
+              - label: "Badge"
+                name: "badge"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "⭐ Bestseller", value: "⭐ Bestseller" }
+                  - { label: "☕ Popular", value: "☕ Popular" }
+                  - { label: "🎁 Gift Favorite", value: "🎁 Gift Favorite" }
+                  - { label: "🐱 For Cats", value: "🐱 For Cats" }
+                  - { label: "🐕 Big Dogs", value: "🐕 Big Dogs" }
+                  - { label: "☕ Mug Shot", value: "☕ Mug Shot" }
+                  - { label: "🐈 Cat Person", value: "🐈 Cat Person" }
+                  - { label: "✏️ Custom", value: "✏️ Custom" }
+                  - { label: "🎁 Gift Idea", value: "🎁 Gift Idea" }
+              - { label: "Product Photo", name: "photo", widget: "image", hint: "Upload a square photo for best results" }
+              - { label: "Short Description (shown on card)", name: "snippet", widget: "string", hint: "One short sentence shown under the product name" }
+              - { label: "Story (shown in popup)", name: "story", widget: "text", hint: "Write this in first person — 2-3 sentences about this piece" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                field: { label: "Detail line", name: "text", widget: "string", hint: "e.g. Food safe, dishwasher safe, kiln-fired" }
+              - label: "Visible on site"
+                name: "visible"
+                widget: "boolean"
+                default: true
+                hint: "Turn this off to keep a product in the catalog without showing it on the public website"
+
+  - name: "events"
+    label: "Market Dates & Events"
+    files:
+      - label: "Upcoming Events"
+        name: "upcoming"
+        file: "data/events.json"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            collapsed: true
+            minimize_collapsed: true
+            summary: "{{fields.date}} — {{fields.name}}"
+            default: []
+            fields:
+              - { label: "Event Name", name: "name", widget: "string", hint: "e.g. Springfield Farmers Market" }
+              - label: "Date"
+                name: "date"
+                widget: "datetime"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Notes", name: "notes", widget: "string", required: false, hint: "e.g. Booth #14, 9am–2pm" }
 
   - name: "settings"
     label: "Site Settings"
     files:
       - label: "Contact & About"
         name: "contact"
-        file: "products/settings.json"
+        file: "data/settings.json"
         fields:
-          - { label: "Kathie's Email", name: "email", widget: "string" }
+          - { label: "Kathie's Email", name: "email", widget: "string", hint: "This changes the email shown on the website. If you change it, also update the contact-form notification email in Netlify." }
           - { label: "Facebook URL", name: "facebook", widget: "string" }
           - { label: "About Us Story (paragraph 1)", name: "about1", widget: "text" }
           - { label: "About Us Story (paragraph 2)", name: "about2", widget: "text" }
           - { label: "Announcement Bar Text", name: "announcement", widget: "string" }
           - { label: "Custom Order Turnaround", name: "turnaround", widget: "string", hint: "e.g. approximately 6 weeks" }
-
-  - name: "events"
-    label: "Market Dates & Events"
-    folder: "events"
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Event Name", name: "name", widget: "string", hint: "e.g. Springfield Farmers Market" }
-      - { label: "Date", name: "date", widget: "date" }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Notes", name: "notes", widget: "string", required: false, hint: "e.g. Booth #14, 9am–2pm" }

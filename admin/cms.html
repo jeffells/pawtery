@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pawtery — Admin Dashboard</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Pawtery — Admin Redirect</title>
+  <script>
+    window.location.replace('/admin/' + window.location.search + window.location.hash);
+  </script>
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <p><a href="/admin/">Open the Pawtery admin dashboard</a></p>
 </body>
 </html>
