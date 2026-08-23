@@ -16,7 +16,7 @@ collections:
   - name: "products"
     label: "Products"
     label_singular: "Product"
-    description: "Click a product below to edit it, or click + New Product to add one. When you're finished, use the publishing button at the top. The website updates automatically after Netlify finishes deploying."
+    description: "Click a product below to edit it, or click New Product to add one. When you're finished, use the publishing button at the top. The website updates automatically after Netlify finishes deploying."
     folder: "products"
     create: true
     delete: true
@@ -101,7 +101,7 @@ collections:
   - name: "events"
     label: "Events & Markets"
     label_singular: "Event"
-    description: "Click an event to edit it, or click + New Event to add one. Past dates automatically disappear from the public website."
+    description: "Click an event to edit it, or click New Event to add one. Past dates automatically disappear from the public website."
     folder: "events"
     create: true
     delete: true
