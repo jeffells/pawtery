@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Netlify Identity redirect handler -->
+  <script>
+    // Redirect invite/recovery tokens to /admin
+    if (window.location.hash && (
+      window.location.hash.includes('invite_token') ||
+      window.location.hash.includes('recovery_token') ||
+      window.location.hash.includes('confirmation_token')
+    )) {
+      window.location = '/admin/' + window.location.hash;
+    }
+  </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pawtery — Dishes & Cups for People & Pups</title>
