@@ -1,11 +1,357 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pawtery — Admin</title>
+  <title>Pawtery — Admin Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #FBF7F2;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 48px 44px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 8px 40px rgba(42,26,16,0.12);
+      border: 1px solid #E2CEBB;
+      text-align: center;
+    }
+
+    .logo-circle {
+      width: 68px; height: 68px;
+      background: #B85C38;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 14px;
+      box-shadow: 0 4px 18px rgba(184,92,56,0.35);
+    }
+
+    .logo-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.6rem;
+      color: #B85C38;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .logo-sub {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #8A6A58;
+      margin-bottom: 32px;
+    }
+
+    /* panels */
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    .panel-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #2A1A10;
+      margin-bottom: 6px;
+    }
+    .panel-sub {
+      font-size: 0.88rem;
+      color: #8A6A58;
+      line-height: 1.6;
+      margin-bottom: 26px;
+    }
+
+    .form-group { margin-bottom: 14px; text-align: left; }
+    .form-group label {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #2A1A10;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid #E2CEBB;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: 'Nunito', sans-serif;
+      color: #2A1A10;
+      background: #FBF7F2;
+      outline: none;
+      transition: border-color 0.18s;
+    }
+    .form-group input:focus { border-color: #B85C38; background: white; }
+
+    .btn {
+      width: 100%;
+      background: #B85C38;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 13px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      font-family: 'Nunito', sans-serif;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      box-shadow: 0 4px 16px rgba(184,92,56,0.35);
+      transition: all 0.2s;
+      margin-top: 6px;
+    }
+    .btn:hover { background: #9E4425; transform: translateY(-1px); }
+    .btn:disabled { background: #ccc; box-shadow: none; transform: none; cursor: not-allowed; }
+
+    .switch-link {
+      margin-top: 20px;
+      font-size: 0.82rem;
+      color: #8A6A58;
+    }
+    .switch-link a {
+      color: #B85C38;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .switch-link a:hover { text-decoration: underline; }
+
+    .msg {
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: none;
+      text-align: left;
+    }
+    .msg.error { background: #FEE; color: #c0392b; border: 1px solid #f5c6cb; }
+    .msg.success { background: #E8F8F0; color: #1e7e34; border: 1px solid #c3e6cb; }
+    .msg.info { background: #FFF3CD; color: #856404; border: 1px solid #ffeeba; }
+
+    .divider {
+      display: flex; align-items: center; gap: 12px;
+      margin: 20px 0; color: #C4A98A; font-size: 0.78rem;
+    }
+    .divider::before, .divider::after {
+      content: ''; flex: 1; height: 1px; background: #E2CEBB;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 28px;
+      font-size: 0.78rem;
+      color: #C4A98A;
+      text-decoration: none;
+    }
+    .back-link:hover { color: #B85C38; }
+
+    #loadingCms {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 0;
+    }
+    .spinner {
+      width: 36px; height: 36px;
+      border: 3px solid #E2CEBB;
+      border-top-color: #B85C38;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+<div class="card">
+  <div class="logo-circle">🐾</div>
+  <div class="logo-name">Pawtery</div>
+  <div class="logo-sub">Website Admin Panel</div>
+
+  <!-- ── PANEL: SET NEW PASSWORD (invite/recovery token) ── -->
+  <div class="panel" id="panelSetPassword">
+    <div class="panel-title">👋 Welcome! Set Your Password</div>
+    <div class="panel-sub">You've been invited to manage the Pawtery website. Choose a password to get started.</div>
+    <div class="msg" id="setMsg"></div>
+    <div class="form-group">
+      <label>New Password</label>
+      <input type="password" id="newPassword" placeholder="Choose a password" autocomplete="new-password">
+    </div>
+    <div class="form-group">
+      <label>Confirm Password</label>
+      <input type="password" id="confirmPassword" placeholder="Type it again" autocomplete="new-password">
+    </div>
+    <button class="btn" id="setPasswordBtn" onclick="handleSetPassword()">Set My Password & Log In</button>
+  </div>
+
+  <!-- ── PANEL: LOGIN ── -->
+  <div class="panel" id="panelLogin">
+    <div class="panel-title">Welcome Back, Kathie!</div>
+    <div class="panel-sub">Log in to manage your Pawtery website — add products, update photos, and more.</div>
+    <div class="msg" id="loginMsg"></div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="loginEmail" placeholder="feebiejean@gmail.com" autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" id="loginPassword" placeholder="Your password" autocomplete="current-password"
+        onkeydown="if(event.key==='Enter') handleLogin()">
+    </div>
+    <button class="btn" id="loginBtn" onclick="handleLogin()">Log In to Admin Panel</button>
+    <div class="switch-link">
+      Forgot your password? <a onclick="showPanel('panelForgot')">Reset it here</a>
+    </div>
+  </div>
+
+  <!-- ── PANEL: FORGOT PASSWORD ── -->
+  <div class="panel" id="panelForgot">
+    <div class="panel-title">Reset Your Password</div>
+    <div class="panel-sub">Enter your email and we'll send you a link to choose a new password.</div>
+    <div class="msg" id="forgotMsg"></div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="forgotEmail" placeholder="feebiejean@gmail.com" autocomplete="email">
+    </div>
+    <button class="btn" onclick="handleForgot()">Send Reset Link</button>
+    <div class="switch-link">
+      Remember it? <a onclick="showPanel('panelLogin')">Back to login</a>
+    </div>
+  </div>
+
+  <!-- ── LOADING CMS ── -->
+  <div id="loadingCms">
+    <div class="spinner"></div>
+    <div style="font-size:0.88rem;color:#8A6A58;font-weight:700;">Loading your dashboard…</div>
+  </div>
+
+  <a href="/" class="back-link">← Back to Pawtery website</a>
+</div>
+
+<script src="https://unpkg.com/netlify-identity-widget@^1.0.0/build/netlify-identity-widget.js"></script>
+<script>
+  // Init Netlify Identity
+  netlifyIdentity.init({ container: '#nowhere' });
+
+  function showPanel(id) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    const el = document.getElementById(id);
+    if (el) el.classList.add('active');
+  }
+
+  function showMsg(id, type, text) {
+    const el = document.getElementById(id);
+    el.className = 'msg ' + type;
+    el.textContent = text;
+    el.style.display = 'block';
+  }
+
+  function hideMsg(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  // Check for tokens in URL
+  const hash = window.location.hash;
+  const params = new URLSearchParams(hash.replace('#', ''));
+  const inviteToken = params.get('invite_token');
+  const recoveryToken = params.get('recovery_token');
+
+  if (inviteToken || recoveryToken) {
+    showPanel('panelSetPassword');
+    if (recoveryToken) {
+      document.querySelector('#panelSetPassword .panel-title').textContent = '🔑 Choose a New Password';
+      document.querySelector('#panelSetPassword .panel-sub').textContent = 'Enter your new password below and you\'ll be logged in right away.';
+    }
+  } else {
+    // Check if already logged in
+    const user = netlifyIdentity.currentUser();
+    if (user) {
+      goToCms();
+    } else {
+      showPanel('panelLogin');
+    }
+  }
+
+  async function handleSetPassword() {
+    const pw = document.getElementById('newPassword').value;
+    const confirm = document.getElementById('confirmPassword').value;
+
+    if (pw.length < 8) { showMsg('setMsg', 'error', 'Password must be at least 8 characters.'); return; }
+    if (pw !== confirm) { showMsg('setMsg', 'error', 'Passwords don\'t match — please try again.'); return; }
+
+    const btn = document.getElementById('setPasswordBtn');
+    btn.disabled = true; btn.textContent = 'Setting password…';
+    hideMsg('setMsg');
+
+    try {
+      if (inviteToken) {
+        await netlifyIdentity.acceptInvite(inviteToken, pw);
+      } else if (recoveryToken) {
+        await netlifyIdentity.recover(recoveryToken, pw);
+      }
+      showMsg('setMsg', 'success', '✅ Password set! Logging you in…');
+      setTimeout(goToCms, 1200);
+    } catch(e) {
+      showMsg('setMsg', 'error', 'Something went wrong. Please request a new invite link.');
+      btn.disabled = false; btn.textContent = 'Set My Password & Log In';
+    }
+  }
+
+  async function handleLogin() {
+    const email = document.getElementById('loginEmail').value;
+    const pw = document.getElementById('loginPassword').value;
+    if (!email || !pw) { showMsg('loginMsg', 'error', 'Please enter your email and password.'); return; }
+
+    const btn = document.getElementById('loginBtn');
+    btn.disabled = true; btn.textContent = 'Logging in…';
+    hideMsg('loginMsg');
+
+    try {
+      await netlifyIdentity.login(email, pw);
+      goToCms();
+    } catch(e) {
+      showMsg('loginMsg', 'error', 'Incorrect email or password. Try again or reset your password below.');
+      btn.disabled = false; btn.textContent = 'Log In to Admin Panel';
+    }
+  }
+
+  async function handleForgot() {
+    const email = document.getElementById('forgotEmail').value;
+    if (!email) { showMsg('forgotMsg', 'error', 'Please enter your email address.'); return; }
+
+    try {
+      await netlifyIdentity.requestPasswordRecovery(email);
+      showMsg('forgotMsg', 'success', '📧 Check your email! Click the link to set a new password.');
+    } catch(e) {
+      showMsg('forgotMsg', 'error', 'Something went wrong. Please try again.');
+    }
+  }
+
+  function goToCms() {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('loadingCms').style.display = 'flex';
+    // Store the token for CMS use then redirect
+    setTimeout(() => {
+      window.location.href = '/admin/cms.html';
+    }, 800);
+  }
+
+  // Handle login event from widget
+  netlifyIdentity.on('login', () => goToCms());
+</script>
 </body>
 </html>
