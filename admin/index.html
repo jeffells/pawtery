@@ -35,123 +35,32 @@
       margin: 0 auto 14px;
       box-shadow: 0 4px 18px rgba(184,92,56,0.35);
     }
-    .logo-name {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.6rem;
-      color: #B85C38;
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .logo-sub {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: #8A6A58;
-      margin-bottom: 32px;
-    }
+    .logo-name { font-family: 'Dancing Script', cursive; font-size: 2.6rem; color: #B85C38; line-height: 1; margin-bottom: 4px; }
+    .logo-sub { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #8A6A58; margin-bottom: 32px; }
     .panel { display: none; }
     .panel.active { display: block; }
-    .panel-title {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: #2A1A10;
-      margin-bottom: 6px;
-    }
-    .panel-sub {
-      font-size: 0.88rem;
-      color: #8A6A58;
-      line-height: 1.6;
-      margin-bottom: 26px;
-    }
+    .panel-title { font-size: 1.25rem; font-weight: 800; color: #2A1A10; margin-bottom: 6px; }
+    .panel-sub { font-size: 0.88rem; color: #8A6A58; line-height: 1.6; margin-bottom: 26px; }
     .form-group { margin-bottom: 14px; text-align: left; }
-    .form-group label {
-      display: block;
-      font-size: 0.72rem;
-      font-weight: 800;
-      color: #2A1A10;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .form-group input {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid #E2CEBB;
-      border-radius: 10px;
-      font-size: 0.95rem;
-      font-family: 'Nunito', sans-serif;
-      color: #2A1A10;
-      background: #FBF7F2;
-      outline: none;
-      transition: border-color 0.18s;
-    }
+    .form-group label { display: block; font-size: 0.72rem; font-weight: 800; color: #2A1A10; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; }
+    .form-group input { width: 100%; padding: 12px 16px; border: 1.5px solid #E2CEBB; border-radius: 10px; font-size: 0.95rem; font-family: 'Nunito', sans-serif; color: #2A1A10; background: #FBF7F2; outline: none; transition: border-color 0.18s; }
     .form-group input:focus { border-color: #B85C38; background: white; }
-    .btn {
-      width: 100%;
-      background: #B85C38;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 13px;
-      font-size: 0.95rem;
-      font-weight: 800;
-      font-family: 'Nunito', sans-serif;
-      cursor: pointer;
-      letter-spacing: 0.04em;
-      box-shadow: 0 4px 16px rgba(184,92,56,0.35);
-      transition: all 0.2s;
-      margin-top: 6px;
-    }
+    .btn { width: 100%; background: #B85C38; color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1rem; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; letter-spacing: 0.04em; box-shadow: 0 4px 16px rgba(184,92,56,0.35); transition: all 0.2s; margin-top: 6px; }
     .btn:hover { background: #9E4425; transform: translateY(-1px); }
     .btn:disabled { background: #ccc; box-shadow: none; transform: none; cursor: not-allowed; }
-    .switch-link {
-      margin-top: 20px;
-      font-size: 0.82rem;
-      color: #8A6A58;
-    }
-    .switch-link a {
-      color: #B85C38;
-      text-decoration: none;
-      font-weight: 700;
-      cursor: pointer;
-    }
+    .switch-link { margin-top: 20px; font-size: 0.82rem; color: #8A6A58; }
+    .switch-link a { color: #B85C38; text-decoration: none; font-weight: 700; cursor: pointer; }
     .switch-link a:hover { text-decoration: underline; }
-    .msg {
-      padding: 12px 16px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      display: none;
-      text-align: left;
-    }
+    .msg { padding: 12px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; margin-bottom: 16px; display: none; text-align: left; line-height: 1.5; }
     .msg.error { background: #FEE; color: #c0392b; border: 1px solid #f5c6cb; }
     .msg.success { background: #E8F8F0; color: #1e7e34; border: 1px solid #c3e6cb; }
-    .spinner-wrap {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      padding: 20px 0;
-    }
-    .spinner {
-      width: 40px; height: 40px;
-      border: 3px solid #E2CEBB;
-      border-top-color: #B85C38;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
+    .spinner-wrap { display: none; flex-direction: column; align-items: center; gap: 14px; padding: 20px 0; }
+    .spinner { width: 40px; height: 40px; border: 3px solid #E2CEBB; border-top-color: #B85C38; border-radius: 50%; animation: spin 0.8s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
     .spinner-text { font-size: 0.9rem; color: #8A6A58; font-weight: 700; }
-    .back-link {
-      display: block;
-      margin-top: 28px;
-      font-size: 0.78rem;
-      color: #C4A98A;
-      text-decoration: none;
-    }
+    .back-link { display: block; margin-top: 28px; font-size: 0.78rem; color: #C4A98A; text-decoration: none; }
     .back-link:hover { color: #B85C38; }
+    .dashboard-btn { display: none; width: 100%; background: #2A7A4F; color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1rem; font-weight: 800; font-family: 'Nunito', sans-serif; cursor: pointer; margin-top: 14px; box-shadow: 0 4px 16px rgba(42,122,79,0.35); }
   </style>
 </head>
 <body>
@@ -160,23 +69,23 @@
   <div class="logo-name">Pawtery</div>
   <div class="logo-sub">Website Admin Panel</div>
 
-  <!-- SET PASSWORD PANEL -->
-  <div class="panel" id="panelSetPassword">
-    <div class="panel-title">👋 Welcome! Set Your Password</div>
-    <div class="panel-sub" id="setPanelSub">Create a password to access your Pawtery admin panel.</div>
+  <!-- SET PASSWORD -->
+  <div class="panel" id="panelSet">
+    <div class="panel-title" id="setTitle">👋 Welcome! Set Your Password</div>
+    <div class="panel-sub" id="setSub">Create a password to access your Pawtery admin panel. You only need to do this once.</div>
     <div class="msg" id="setMsg"></div>
     <div class="form-group">
       <label>New Password</label>
-      <input type="password" id="newPassword" placeholder="At least 8 characters" autocomplete="new-password">
+      <input type="password" id="newPw" placeholder="At least 8 characters" autocomplete="new-password">
     </div>
     <div class="form-group">
       <label>Confirm Password</label>
-      <input type="password" id="confirmPassword" placeholder="Type it again" autocomplete="new-password">
+      <input type="password" id="confirmPw" placeholder="Type it again" autocomplete="new-password">
     </div>
-    <button class="btn" id="setBtn" onclick="handleSetPassword()">Set Password &amp; Open Dashboard →</button>
+    <button class="btn" id="setBtn" onclick="handleSet()">Set Password &amp; Open My Dashboard →</button>
   </div>
 
-  <!-- LOGIN PANEL -->
+  <!-- LOGIN -->
   <div class="panel" id="panelLogin">
     <div class="panel-title">Welcome Back, Kathie! 🐾</div>
     <div class="panel-sub">Log in to add products, update photos, and manage your website.</div>
@@ -187,32 +96,28 @@
     </div>
     <div class="form-group">
       <label>Password</label>
-      <input type="password" id="loginPassword" placeholder="Your password" autocomplete="current-password"
+      <input type="password" id="loginPw" placeholder="Your password" autocomplete="current-password"
         onkeydown="if(event.key==='Enter') handleLogin()">
     </div>
-    <button class="btn" id="loginBtn" onclick="handleLogin()">Log In &amp; Open Dashboard →</button>
-    <div class="switch-link">
-      Forgot your password? <a onclick="showForgot()">Send me a reset link</a>
-    </div>
+    <button class="btn" id="loginBtn" onclick="handleLogin()">Log In &amp; Open My Dashboard →</button>
+    <div class="switch-link">Forgot your password? <a onclick="showPanel('panelForgot')">Send me a reset link</a></div>
   </div>
 
-  <!-- FORGOT PASSWORD PANEL -->
+  <!-- FORGOT -->
   <div class="panel" id="panelForgot">
     <div class="panel-title">🔑 Reset Your Password</div>
-    <div class="panel-sub">Enter your email and we'll send a link to create a new password.</div>
+    <div class="panel-sub">We'll email you a link to create a new password.</div>
     <div class="msg" id="forgotMsg"></div>
     <div class="form-group">
-      <label>Your Email Address</label>
+      <label>Your Email</label>
       <input type="email" id="forgotEmail" value="feebiejean@gmail.com" autocomplete="email">
     </div>
     <button class="btn" onclick="handleForgot()">Send Reset Link to My Email</button>
-    <div class="switch-link">
-      <a onclick="showPanel('panelLogin')">← Back to login</a>
-    </div>
+    <div class="switch-link"><a onclick="showPanel('panelLogin')">← Back to login</a></div>
   </div>
 
-  <!-- LOADING SPINNER -->
-  <div class="spinner-wrap" id="spinnerWrap">
+  <!-- LOADING -->
+  <div class="spinner-wrap" id="spinner">
     <div class="spinner"></div>
     <div class="spinner-text" id="spinnerText">Opening your dashboard…</div>
   </div>
@@ -220,125 +125,152 @@
   <a href="/" class="back-link">← Back to Pawtery website</a>
 </div>
 
-<script src="https://unpkg.com/netlify-identity-widget@^1.0.0/build/netlify-identity-widget.js"></script>
 <script>
-  netlifyIdentity.init({ container: '#nowhere' });
+  // Direct Netlify Identity API — no widget, no popups
+  const SITE_URL = 'https://pawtery.shop';
+  const API = SITE_URL + '/.netlify/identity';
 
-  // Parse URL hash for tokens
-  const hashStr = window.location.hash.replace('#', '');
-  const params = new URLSearchParams(hashStr);
-  const inviteToken = params.get('invite_token');
-  const recoveryToken = params.get('recovery_token');
+  const hash = window.location.hash.replace('#','');
+  const p = new URLSearchParams(hash);
+  const inviteToken = p.get('invite_token');
+  const recoveryToken = p.get('recovery_token');
 
   function showPanel(id) {
-    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(el => el.classList.remove('active'));
+    document.getElementById('spinner').style.display = 'none';
     const el = document.getElementById(id);
     if (el) el.classList.add('active');
-    document.getElementById('spinnerWrap').style.display = 'none';
   }
 
-  function showSpinner(text) {
-    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-    const sw = document.getElementById('spinnerWrap');
-    sw.style.display = 'flex';
-    document.getElementById('spinnerText').textContent = text || 'Opening your dashboard…';
+  function showSpinner(txt) {
+    document.querySelectorAll('.panel').forEach(el => el.classList.remove('active'));
+    document.getElementById('spinner').style.display = 'flex';
+    document.getElementById('spinnerText').textContent = txt || 'Opening your dashboard…';
   }
 
-  function showMsg(id, type, text) {
+  function showMsg(id, type, txt) {
     const el = document.getElementById(id);
     el.className = 'msg ' + type;
-    el.textContent = text;
+    el.textContent = txt;
     el.style.display = 'block';
   }
 
+  function saveToken(token) {
+    localStorage.setItem('netlifySiteURL', SITE_URL);
+    localStorage.setItem('netlify-cms-user', JSON.stringify({ token: { access_token: token } }));
+  }
+
   function goToDashboard() {
-    showSpinner('You\'re in! Opening your dashboard…');
-    setTimeout(() => { window.location.href = '/admin/cms.html'; }, 1000);
+    showSpinner("✅ You're in! Opening your dashboard…");
+    setTimeout(() => { window.location.href = '/admin/cms.html'; }, 900);
   }
 
-  function showForgot() {
-    showPanel('panelForgot');
-  }
-
-  // Decide which panel to show on load
+  // Decide initial panel
   if (inviteToken) {
-    showPanel('panelSetPassword');
+    showPanel('panelSet');
   } else if (recoveryToken) {
-    showPanel('panelSetPassword');
-    document.getElementById('setPanelSub').textContent = 'Enter your new password below — you\'ll go straight to the dashboard.';
-    document.querySelector('#panelSetPassword .panel-title').textContent = '🔑 Create a New Password';
-    document.getElementById('setBtn').textContent = 'Save New Password & Open Dashboard →';
+    showPanel('panelSet');
+    document.getElementById('setTitle').textContent = '🔑 Create a New Password';
+    document.getElementById('setSub').textContent = "Enter your new password and you'll go straight to your dashboard.";
+    document.getElementById('setBtn').textContent = 'Save New Password & Open My Dashboard →';
   } else {
-    const user = netlifyIdentity.currentUser();
-    if (user) {
-      goToDashboard();
-    } else {
-      showPanel('panelLogin');
-    }
+    // Check stored session
+    try {
+      const stored = localStorage.getItem('gotrue.user');
+      if (stored) { goToDashboard(); } else { showPanel('panelLogin'); }
+    } catch(e) { showPanel('panelLogin'); }
   }
 
-  async function handleSetPassword() {
-    const pw = document.getElementById('newPassword').value.trim();
-    const pw2 = document.getElementById('confirmPassword').value.trim();
+  async function handleSet() {
+    const pw = document.getElementById('newPw').value.trim();
+    const pw2 = document.getElementById('confirmPw').value.trim();
     const btn = document.getElementById('setBtn');
-
-    if (pw.length < 8) { showMsg('setMsg', 'error', '⚠️ Password must be at least 8 characters.'); return; }
-    if (pw !== pw2) { showMsg('setMsg', 'error', '⚠️ Passwords don\'t match — please try again.'); return; }
-
-    btn.disabled = true;
-    btn.textContent = 'Setting your password…';
+    if (pw.length < 8) { showMsg('setMsg','error','⚠️ Password must be at least 8 characters.'); return; }
+    if (pw !== pw2) { showMsg('setMsg','error','⚠️ Passwords don\'t match — please try again.'); return; }
+    btn.disabled = true; btn.textContent = 'Setting your password…';
     document.getElementById('setMsg').style.display = 'none';
-
     try {
-      if (inviteToken) {
-        await netlifyIdentity.acceptInvite(inviteToken, pw, true);
-      } else if (recoveryToken) {
-        await netlifyIdentity.recover(recoveryToken, pw, true);
+      const endpoint = inviteToken
+        ? `${API}/verify?token=${inviteToken}&type=signup`
+        : `${API}/verify?token=${recoveryToken}&type=recovery`;
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw })
+      });
+      if (!res.ok) throw new Error('verify failed');
+      const data = await res.json();
+      if (data.access_token) {
+        localStorage.setItem('gotrue.user', JSON.stringify(data));
       }
-      // Small delay to let the login complete
-      setTimeout(goToDashboard, 600);
+      goToDashboard();
     } catch(e) {
       console.error(e);
-      showMsg('setMsg', 'error', '⚠️ Something went wrong. Please request a new link from your admin.');
-      btn.disabled = false;
-      btn.textContent = 'Set Password & Open Dashboard →';
+      // Fallback: try netlify-identity-widget
+      try {
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/netlify-identity-widget@^1.0.0/build/netlify-identity-widget.js';
+        script.onload = async () => {
+          netlifyIdentity.init();
+          try {
+            if (inviteToken) await netlifyIdentity.acceptInvite(inviteToken, pw, true);
+            else await netlifyIdentity.recover(recoveryToken, pw, true);
+            goToDashboard();
+          } catch(e2) {
+            showMsg('setMsg','error','⚠️ Something went wrong. Please ask your admin to send a new invite link.');
+            btn.disabled = false;
+            btn.textContent = 'Set Password & Open My Dashboard →';
+          }
+        };
+        document.head.appendChild(script);
+      } catch(e2) {
+        showMsg('setMsg','error','⚠️ Something went wrong. Please ask your admin to send a new invite link.');
+        btn.disabled = false;
+        btn.textContent = 'Set Password & Open My Dashboard →';
+      }
     }
   }
 
   async function handleLogin() {
     const email = document.getElementById('loginEmail').value.trim();
-    const pw = document.getElementById('loginPassword').value;
+    const pw = document.getElementById('loginPw').value;
     const btn = document.getElementById('loginBtn');
-
-    if (!email || !pw) { showMsg('loginMsg', 'error', '⚠️ Please enter your email and password.'); return; }
-
-    btn.disabled = true;
-    btn.textContent = 'Logging in…';
+    if (!email || !pw) { showMsg('loginMsg','error','⚠️ Please enter your email and password.'); return; }
+    btn.disabled = true; btn.textContent = 'Logging in…';
     document.getElementById('loginMsg').style.display = 'none';
-
     try {
-      await netlifyIdentity.login(email, pw, true);
+      const res = await fetch(`${API}/token`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `grant_type=password&username=${encodeURIComponent(email)}&password=${encodeURIComponent(pw)}`
+      });
+      if (!res.ok) throw new Error('login failed');
+      const data = await res.json();
+      localStorage.setItem('gotrue.user', JSON.stringify(data));
       goToDashboard();
     } catch(e) {
-      showMsg('loginMsg', 'error', '⚠️ Incorrect email or password. Try again or use "Send me a reset link" below.');
+      showMsg('loginMsg','error','⚠️ Incorrect email or password. Try again, or click "Send me a reset link" below.');
       btn.disabled = false;
-      btn.textContent = 'Log In & Open Dashboard →';
+      btn.textContent = 'Log In & Open My Dashboard →';
     }
   }
 
   async function handleForgot() {
     const email = document.getElementById('forgotEmail').value.trim();
-    if (!email) { showMsg('forgotMsg', 'error', '⚠️ Please enter your email.'); return; }
+    if (!email) { showMsg('forgotMsg','error','⚠️ Please enter your email.'); return; }
     try {
-      await netlifyIdentity.requestPasswordRecovery(email);
-      showMsg('forgotMsg', 'success', '📧 Done! Check your email for the reset link. Click it and you\'ll be brought right back here to set a new password.');
+      const res = await fetch(`${API}/recover`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+      if (res.ok) {
+        showMsg('forgotMsg','success','📧 Done! Check your email for the reset link. When you click it, you\'ll come right back here to set a new password.');
+      } else { throw new Error(); }
     } catch(e) {
-      showMsg('forgotMsg', 'error', '⚠️ Something went wrong. Please try again.');
+      showMsg('forgotMsg','error','⚠️ Something went wrong. Please try again.');
     }
   }
-
-  // Handle successful login via widget events
-  netlifyIdentity.on('login', () => goToDashboard());
 </script>
 </body>
 </html>
