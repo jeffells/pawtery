@@ -34,7 +34,20 @@ function writeJson(filename, value) {
   );
 }
 
+function normalizeProduct(product) {
+  const details = Array.isArray(product.details)
+    ? product.details.map(String).map(v => v.trim()).filter(Boolean)
+    : String(product.details_text || '')
+        .split(/\r?\n/)
+        .map(v => v.trim())
+        .filter(Boolean);
+
+  const { details_text, ...publicProduct } = product;
+  return { ...publicProduct, details };
+}
+
 const products = readJsonEntries('products')
+  .map(normalizeProduct)
   .sort((a, b) => {
     const orderA = Number.isFinite(Number(a.order)) ? Number(a.order) : 999;
     const orderB = Number.isFinite(Number(b.order)) ? Number(b.order) : 999;

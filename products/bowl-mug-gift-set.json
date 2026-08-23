@@ -1,18 +1,12 @@
 {
   "name": "Bowl & Mug Gift Set",
+  "photo": "https://static.wixstatic.com/media/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg/v1/fit/w_700,h_700,q_90/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg",
   "price": "From $55",
   "price_note": "· bowl + mug together",
   "badge": "🎁 Gift Idea",
-  "photo": "https://static.wixstatic.com/media/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg/v1/fit/w_700,h_700,q_90/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg",
   "snippet": "A matching bowl for the pet and mug for their person.",
   "story": "This is my favorite thing to put together — a personalized bowl for someone's pet and a matching mug for them, glazed in coordinating colors so it feels like a real set. It's the kind of gift people keep for years. I can include a handwritten card if you'd like.",
-  "details": [
-    "🎁 Includes: One personalized pet bowl + one dog or cat face mug",
-    "🎨 Customization: Pet's name on bowl, coordinating colors",
-    "🍽️ Safety: Both pieces food safe, dishwasher safe",
-    "⏱️ Turnaround: ~6 weeks — perfect for planned gifts",
-    "💌 Gift note: Ask me to include a handwritten card"
-  ],
+  "details_text": "🎁 Includes: One personalized pet bowl + one dog or cat face mug\n🎨 Customization: Pet's name on bowl, coordinating colors\n🍽️ Safety: Both pieces food safe, dishwasher safe\n⏱️ Turnaround: ~6 weeks — perfect for planned gifts\n💌 Gift note: Ask me to include a handwritten card",
   "visible": true,
   "order": 70
 }

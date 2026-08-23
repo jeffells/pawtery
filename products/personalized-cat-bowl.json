@@ -1,18 +1,12 @@
 {
   "name": "Personalized Cat Bowl",
+  "photo": "https://static.wixstatic.com/media/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg/v1/fill/w_700,h_700,al_c,q_90/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg",
   "price": "From $20",
   "price_note": "· medium personalized",
   "badge": "🐱 For Cats",
-  "photo": "https://static.wixstatic.com/media/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg/v1/fill/w_700,h_700,al_c,q_90/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg",
   "snippet": "Low, wide, whisker-friendly. Named and glazed just for them.",
   "story": "Cats have opinions — especially about their dishes. I design my cat bowls low and wide, the way cats actually prefer them, so their whiskers stay comfortable. Tell me your cat's name and the colors you love, and I'll make them something as refined as they believe they are.",
-  "details": [
-    "📏 Shape: Low, wide rim — whisker-friendly",
-    "🎨 Customization: Cat's name + glaze color choice",
-    "🍽️ Safety: Food safe, dishwasher safe, kiln-fired",
-    "⏱️ Turnaround: ~6 weeks",
-    "📦 Shipping: USPS flat rate nationwide"
-  ],
+  "details_text": "📏 Shape: Low, wide rim — whisker-friendly\n🎨 Customization: Cat's name + glaze color choice\n🍽️ Safety: Food safe, dishwasher safe, kiln-fired\n⏱️ Turnaround: ~6 weeks\n📦 Shipping: USPS flat rate nationwide",
   "visible": true,
   "order": 20
 }

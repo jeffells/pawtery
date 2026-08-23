@@ -2,147 +2,147 @@
   "products": [
     {
       "name": "Personalized Dog Bowl",
+      "photo": "https://static.wixstatic.com/media/7b9876_cb3476248e27487d8d6028a97df772ad~mv2_d_4032_3024_s_4_2.jpg/v1/crop/x_0,y_0,w_3494,h_2577/fill/w_700,h_700,al_c,q_90/7b9876_cb3476248e27487d8d6028a97df772ad~mv2_d_4032_3024_s_4_2.jpg",
       "price": "From $25",
       "price_note": "· price varies by size",
       "badge": "⭐ Bestseller",
-      "photo": "https://static.wixstatic.com/media/7b9876_cb3476248e27487d8d6028a97df772ad~mv2_d_4032_3024_s_4_2.jpg/v1/crop/x_0,y_0,w_3494,h_2577/fill/w_700,h_700,al_c,q_90/7b9876_cb3476248e27487d8d6028a97df772ad~mv2_d_4032_3024_s_4_2.jpg",
       "snippet": "Your pup's name, your colors. A bowl worthy of their standards.",
       "story": "It all started with my dog Feebie — she had a beat-up plastic dish that simply did not suit her dignity. So I made her a proper one. Now I make them for everyone's beloved pups. Tell me your dog's name and your favorite colors, and I'll create something worthy of them.",
+      "visible": true,
+      "order": 10,
       "details": [
         "📏 Sizes: Small, Medium, Large",
         "🎨 Customization: Pet's name + your choice of glaze colors",
         "🍽️ Safety: Food safe, dishwasher safe, kiln-fired",
         "⏱️ Turnaround: ~6 weeks for custom orders",
         "📦 Shipping: USPS flat rate — ships anywhere in the US"
-      ],
-      "visible": true,
-      "order": 10
+      ]
     },
     {
       "name": "Personalized Cat Bowl",
+      "photo": "https://static.wixstatic.com/media/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg/v1/fill/w_700,h_700,al_c,q_90/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg",
       "price": "From $20",
       "price_note": "· medium personalized",
       "badge": "🐱 For Cats",
-      "photo": "https://static.wixstatic.com/media/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg/v1/fill/w_700,h_700,al_c,q_90/7b9876_5ccd16f17b6c409e84af63769f126b73~mv2.jpg",
       "snippet": "Low, wide, whisker-friendly. Named and glazed just for them.",
       "story": "Cats have opinions — especially about their dishes. I design my cat bowls low and wide, the way cats actually prefer them, so their whiskers stay comfortable. Tell me your cat's name and the colors you love, and I'll make them something as refined as they believe they are.",
+      "visible": true,
+      "order": 20,
       "details": [
         "📏 Shape: Low, wide rim — whisker-friendly",
         "🎨 Customization: Cat's name + glaze color choice",
         "🍽️ Safety: Food safe, dishwasher safe, kiln-fired",
         "⏱️ Turnaround: ~6 weeks",
         "📦 Shipping: USPS flat rate nationwide"
-      ],
-      "visible": true,
-      "order": 20
+      ]
     },
     {
       "name": "Dog Face Mug",
+      "photo": "https://static.wixstatic.com/media/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg/v1/fill/w_700,h_700,al_c,q_90/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg",
       "price": "From $28",
       "price_note": "· $35 complex designs",
       "badge": "☕ Popular",
-      "photo": "https://static.wixstatic.com/media/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg/v1/fill/w_700,h_700,al_c,q_90/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg",
       "snippet": "A whimsical mug that starts every morning with a smile.",
       "story": "I hand-sculpt every one of these — ears, snout, the whole personality. No two are exactly alike because I paint each one by hand. They make even Monday mornings something to look forward to, and they're my most popular gift item by far. Honestly, I'd keep every one I make.",
+      "visible": true,
+      "order": 30,
       "details": [
         "☕ Size: Standard mug, ~12 oz",
         "🎨 Style: Hand-sculpted face, hand-painted glaze",
         "🍽️ Safety: Food safe, dishwasher safe",
         "⏱️ Turnaround: ~6 weeks",
         "🎁 Great for: Dog lovers, birthdays, holidays"
-      ],
-      "visible": true,
-      "order": 30
+      ]
     },
     {
       "name": "Espresso Cup",
+      "photo": "https://static.wixstatic.com/media/7b9876_263d2a18979c43f784c4fda1ff2ee185~mv2.jpeg/v1/fill/w_700,h_700,al_c,q_90/7b9876_263d2a18979c43f784c4fda1ff2ee185~mv2.jpeg",
       "price": "From $18",
       "price_note": "· per cup",
       "badge": "🎁 Gift Favorite",
-      "photo": "https://static.wixstatic.com/media/7b9876_263d2a18979c43f784c4fda1ff2ee185~mv2.jpeg/v1/fill/w_700,h_700,al_c,q_90/7b9876_263d2a18979c43f784c4fda1ff2ee185~mv2.jpeg",
       "snippet": "Small but mighty. A little luxury for the coffee lover.",
       "story": "I love making these — there's something satisfying about a small, perfectly formed cup. It holds that first sip of the day like it was made for it, because it was. Pair one with a bag of good coffee and you have a gift that feels genuinely luxurious.",
+      "visible": true,
+      "order": 40,
       "details": [
         "☕ Size: ~3–4 oz espresso cup",
         "🎨 Options: Various glazes — ask about current colors",
         "🍽️ Safety: Food safe, dishwasher safe",
         "⏱️ Availability: Some ready to ship; custom ~6 weeks",
         "📦 Shipping: USPS flat rate, carefully packed"
-      ],
-      "visible": true,
-      "order": 40
+      ]
     },
     {
       "name": "Cat Face Mug",
+      "photo": "https://static.wixstatic.com/media/7b9876_aac43129c4984a19be2f7e034395ad25~mv2.jpeg/v1/crop/x_0,y_504,w_3024,h_3024/fill/w_700,h_700,al_c,q_90/7b9876_aac43129c4984a19be2f7e034395ad25~mv2.jpeg",
       "price": "From $28",
       "price_note": "· $35 complex designs",
       "badge": "🐈 Cat Person",
-      "photo": "https://static.wixstatic.com/media/7b9876_aac43129c4984a19be2f7e034395ad25~mv2.jpeg/v1/crop/x_0,y_504,w_3024,h_3024/fill/w_700,h_700,al_c,q_90/7b9876_aac43129c4984a19be2f7e034395ad25~mv2.jpeg",
       "snippet": "For the cat person who wants everyone to know it.",
       "story": "I sculpt and paint each one of these individually, trying to capture that look cats have perfected — slightly amused, slightly judgmental, entirely themselves. These are for the people who want everyone to know exactly where their loyalties lie. A cup that looks back at you.",
+      "visible": true,
+      "order": 50,
       "details": [
         "☕ Size: Standard mug, ~12 oz",
         "🎨 Style: Hand-sculpted cat face, hand-painted glaze",
         "🍽️ Safety: Food safe, dishwasher safe",
         "⏱️ Turnaround: ~6 weeks",
         "📦 Shipping: Carefully packed, ships nationwide"
-      ],
-      "visible": true,
-      "order": 50
+      ]
     },
     {
       "name": "Large Personalized Bowl",
+      "photo": "https://static.wixstatic.com/media/7b9876_a8023aac40ff4a6bbafc3f6a1fef590d~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_700,h_700,al_c,q_90/7b9876_a8023aac40ff4a6bbafc3f6a1fef590d~mv2_d_4032_3024_s_4_2.jpg",
       "price": "From $35",
       "price_note": "· personalized with name",
       "badge": "🐕 Big Dogs",
-      "photo": "https://static.wixstatic.com/media/7b9876_a8023aac40ff4a6bbafc3f6a1fef590d~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_700,h_700,al_c,q_90/7b9876_a8023aac40ff4a6bbafc3f6a1fef590d~mv2_d_4032_3024_s_4_2.jpg",
       "snippet": "For the big dogs who deserve big things.",
       "story": "The big dogs have waited long enough. I make these larger bowls for the golden retrievers, the labs, and the Great Danes of the world — wide and sturdy enough that they can eat without knocking it across the kitchen. Tell me the name and colors and I'll make it right.",
+      "visible": true,
+      "order": 60,
       "details": [
         "📏 Size: Large — suited for medium to large breeds",
         "🎨 Customization: Pet's name + glaze color choice",
         "🍽️ Safety: Food safe, dishwasher safe, kiln-fired",
         "⏱️ Turnaround: ~6 weeks",
         "📦 Shipping: USPS flat rate, well-packed"
-      ],
-      "visible": true,
-      "order": 60
+      ]
     },
     {
       "name": "Bowl & Mug Gift Set",
+      "photo": "https://static.wixstatic.com/media/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg/v1/fit/w_700,h_700,q_90/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg",
       "price": "From $55",
       "price_note": "· bowl + mug together",
       "badge": "🎁 Gift Idea",
-      "photo": "https://static.wixstatic.com/media/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg/v1/fit/w_700,h_700,q_90/7b9876_f1564aed21c54cc7bc13e881e201028c~mv2_d_4032_3024_s_4_2.jpg",
       "snippet": "A matching bowl for the pet and mug for their person.",
       "story": "This is my favorite thing to put together — a personalized bowl for someone's pet and a matching mug for them, glazed in coordinating colors so it feels like a real set. It's the kind of gift people keep for years. I can include a handwritten card if you'd like.",
+      "visible": true,
+      "order": 70,
       "details": [
         "🎁 Includes: One personalized pet bowl + one dog or cat face mug",
         "🎨 Customization: Pet's name on bowl, coordinating colors",
         "🍽️ Safety: Both pieces food safe, dishwasher safe",
         "⏱️ Turnaround: ~6 weeks — perfect for planned gifts",
         "💌 Gift note: Ask me to include a handwritten card"
-      ],
-      "visible": true,
-      "order": 70
+      ]
     },
     {
       "name": "Something Custom",
+      "photo": "https://static.wixstatic.com/media/7b9876_536257a761c14795a01e1e31fb882727~mv2.png/v1/fill/w_700,h_700,al_c,q_90/7b9876_536257a761c14795a01e1e31fb882727~mv2.png",
       "price": "Price Varies",
       "price_note": "· quoted per project",
       "badge": "✏️ Custom",
-      "photo": "https://static.wixstatic.com/media/7b9876_536257a761c14795a01e1e31fb882727~mv2.png/v1/fill/w_700,h_700,al_c,q_90/7b9876_536257a761c14795a01e1e31fb882727~mv2.png",
       "snippet": "Have something special in mind? Let's talk.",
       "story": "Sometimes the right piece just doesn't exist yet — so I make it. I take a limited number of custom orders beyond my usual work. The best way to start is to reach out and describe what you have in mind. I'll let you know honestly whether it's something I can take on and what it would cost.",
+      "visible": true,
+      "order": 80,
       "details": [
         "✏️ Possibilities: Bowls, decorative pieces, platters, garden angels, and more",
         "💬 How to order: Contact me to describe your idea",
         "🍽️ Safety: All functional pieces food safe and dishwasher safe",
         "⏱️ Turnaround: ~6 weeks from confirmation",
         "📦 Shipping: USPS flat rate nationwide"
-      ],
-      "visible": true,
-      "order": 80
+      ]
     }
   ]
 }

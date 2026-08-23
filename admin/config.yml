@@ -5,7 +5,7 @@ backend:
 site_url: https://pawtery.shop
 display_url: https://pawtery.shop
 
-# Keep the editing screen simple: the public website is the preview.
+# Keep editing focused on simple forms rather than a technical preview pane.
 editor:
   preview: false
 
@@ -15,8 +15,8 @@ public_folder: "/uploads"
 collections:
   - name: "products"
     label: "Products"
-    label_singular: "Product"
-    description: "Click a product to edit it, or choose New Product to add one. After you save, the website updates automatically in about a minute."
+    label_singular: "New Product"
+    description: "Click a product below to edit it, or click + New Product to add one. When you're finished, use the publishing button at the top. The website updates automatically after Netlify finishes deploying."
     folder: "products"
     create: true
     delete: true
@@ -27,27 +27,32 @@ collections:
     summary: "{{name}} — {{price}}"
     sortable_fields: ["order", "name", "commit_date"]
     fields:
-      - label: "Product Name"
+      - label: "1. Product Name"
         name: "name"
         widget: "string"
-        hint: "The name customers will see on the website."
+        hint: "The name customers see on the website. Edit any fields you need below, then use the publishing button at the top when you're finished."
 
-      - label: "Price Shown on Website"
+      - label: "2. Product Photo"
+        name: "photo"
+        widget: "image"
+        hint: "Choose the main photo customers will see. Square photos work best."
+
+      - label: "3. Price Shown on Website"
         name: "price"
         widget: "string"
         hint: "Examples: From $25, $35, or Price Varies."
 
-      - label: "Small Price Note"
+      - label: "4. Extra Price Information (Optional)"
         name: "price_note"
         widget: "string"
         required: false
-        hint: "Optional. Example: · price varies by size"
+        hint: "Only use this when helpful. Examples: · price varies by size, · per cup, or · quoted per project."
 
-      - label: "Product Badge"
+      - label: "5. Badge (Optional)"
         name: "badge"
         widget: "select"
         required: false
-        hint: "Optional label shown on the product photo."
+        hint: "Optional small label shown over the product photo."
         options:
           - { label: "⭐ Bestseller", value: "⭐ Bestseller" }
           - { label: "☕ Popular", value: "☕ Popular" }
@@ -59,50 +64,39 @@ collections:
           - { label: "✏️ Custom", value: "✏️ Custom" }
           - { label: "🎁 Gift Idea", value: "🎁 Gift Idea" }
 
-      - label: "Product Photo"
-        name: "photo"
-        widget: "image"
-        hint: "Upload or choose the main product photo. Square photos work best."
-
-      - label: "Short Description"
+      - label: "6. Short Description"
         name: "snippet"
         widget: "string"
-        hint: "One short sentence shown on the product card."
+        hint: "One short sentence shown directly under the product name on the homepage."
 
-      - label: "Full Product Story"
+      - label: "7. Full Description / Story"
         name: "story"
         widget: "text"
-        hint: "This appears after a customer clicks the product. Two or three sentences works well."
+        hint: "Customers see this after they click the product. Two or three sentences usually works well."
 
-      - label: "Product Details"
-        name: "details"
-        widget: "list"
-        label_singular: "Detail"
-        collapsed: false
-        field:
-          label: "Detail"
-          name: "text"
-          widget: "string"
-          hint: "Examples: size, colors, food-safe information, shipping, or turnaround time."
+      - label: "8. Product Details / Features"
+        name: "details_text"
+        widget: "text"
+        hint: "Put ONE detail on each line. Example: 📏 Sizes: Small, Medium, Large. These lines appear as the product details on the website."
 
-      - label: "Show This Product on the Website?"
+      - label: "9. Show This Product on the Website?"
         name: "visible"
         widget: "boolean"
         default: true
         hint: "ON = customers can see it. OFF = keep it saved here but hide it from the public website."
 
-      - label: "Website Order"
+      - label: "10. Display Order (Usually Leave This Alone)"
         name: "order"
         widget: "number"
         value_type: "int"
         min: 1
         default: 99
-        hint: "Lower numbers appear first. You can usually leave this alone. Use 10, 20, 30, etc. if you want to rearrange products."
+        hint: "You normally do not need to change this. Lower numbers appear earlier on the homepage. A new product can stay at 99 and will appear near the end."
 
   - name: "events"
     label: "Events & Markets"
-    label_singular: "Event"
-    description: "Add upcoming markets, fairs, and appearances here. Past dates automatically disappear from the public website."
+    label_singular: "New Event"
+    description: "Click an event to edit it, or click + New Event to add one. Past dates automatically disappear from the public website."
     folder: "events"
     create: true
     delete: true
@@ -113,30 +107,30 @@ collections:
     summary: "{{date | date('MMM D, YYYY')}} — {{name}}"
     sortable_fields: ["date", "name", "commit_date"]
     fields:
-      - label: "Event Name"
+      - label: "1. Event Name"
         name: "name"
         widget: "string"
         hint: "Example: Winter Park Art Festival"
 
-      - label: "Event Date"
+      - label: "2. Event Date"
         name: "date"
         widget: "datetime"
         date_format: "YYYY-MM-DD"
         time_format: false
         picker_utc: true
 
-      - label: "Location"
+      - label: "3. Location"
         name: "location"
         widget: "string"
         hint: "Venue, city, or market location."
 
-      - label: "Time / Booth / Extra Details"
+      - label: "4. Time / Booth / Extra Details (Optional)"
         name: "notes"
         widget: "string"
         required: false
-        hint: "Optional. Example: 9 AM–2 PM · Booth #14"
+        hint: "Example: 9 AM–2 PM · Booth #14"
 
-      - label: "Show This Event on the Website?"
+      - label: "5. Show This Event on the Website?"
         name: "visible"
         widget: "boolean"
         default: true
@@ -165,7 +159,7 @@ collections:
           - label: "Announcement Bar"
             name: "announcement"
             widget: "string"
-            hint: "The short message across the very top of the homepage. Keep the words “Order yours today” if you want that phrase to remain clickable."
+            hint: "The short message across the very top of the homepage. Keep the words ‘Order yours today’ if you want that phrase to remain clickable."
 
           - label: "Custom Order Turnaround"
             name: "turnaround"
