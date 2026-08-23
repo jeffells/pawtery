@@ -35,7 +35,12 @@ collections:
       - label: "2. Product Photo"
         name: "photo"
         widget: "image"
-        hint: "Choose the main photo customers will see. Square photos work best."
+        choose_url: false
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
+        hint: "Click Choose different image to upload a new photo or select one already saved. Square photos work best."
 
       - label: "3. Price Shown on Website"
         name: "price"
