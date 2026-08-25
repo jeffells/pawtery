@@ -185,9 +185,11 @@ footer{background:var(--bark);color:white;padding:44px 24px 24px;}
 .footer-links{display:flex;gap:6px;flex-wrap:wrap;}
 .footer-links a{color:rgba(255,255,255,0.55);text-decoration:none;font-size:0.8rem;padding:6px 12px;border-radius:6px;transition:all 0.18s;}
 .footer-links a:hover{color:white;background:rgba(255,255,255,0.07);}
-.footer-socials{display:flex;gap:8px;}
-.footer-socials a{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;font-size:1rem;text-decoration:none;transition:all 0.18s;}
-.footer-socials a:hover{background:var(--clay);transform:translateY(-2px);}
+.footer-socials{display:flex;gap:8px;flex-wrap:wrap;}
+.footer-socials a{height:38px;padding:0 12px;border-radius:8px;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;gap:7px;color:rgba(255,255,255,0.82);font-size:0.78rem;font-weight:700;text-decoration:none;transition:all 0.18s;}
+.footer-socials a:hover{background:var(--clay);color:white;transform:translateY(-2px);}
+.footer-socials svg{width:18px;height:18px;display:block;fill:currentColor;flex:0 0 auto;}
+.footer-facebook-icon{font-family:Arial,sans-serif;font-size:21px;font-weight:700;line-height:1;transform:translateY(1px);}
 .footer-copy{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 .footer-copy p{font-size:0.75rem;color:rgba(255,255,255,0.3);}
 
@@ -437,8 +439,16 @@ footer{background:var(--bark);color:white;padding:44px 24px 24px;}
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-socials">
-      <a href="https://www.facebook.com/forpeopleandpups/" target="_blank" rel="noopener noreferrer" data-facebook-link aria-label="Pawtery on Facebook">📘</a>
-      <a href="mailto:feebiejean@gmail.com" data-email-link aria-label="Email Kathie">✉️</a>
+      <a href="https://www.facebook.com/forpeopleandpups/" target="_blank" rel="noopener noreferrer" data-facebook-link aria-label="Pawtery on Facebook">
+        <span class="footer-facebook-icon" aria-hidden="true">f</span>
+        <span>Facebook</span>
+      </a>
+      <a href="mailto:feebiejean@gmail.com" data-email-link aria-label="Email Kathie">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+        </svg>
+        <span>Email</span>
+      </a>
     </div>
   </div>
   <div class="footer-copy">
@@ -874,12 +884,34 @@ function openPopup() {
   document.body.style.overflow = 'hidden';
 }
 
-function closePopup() {
+const POPUP_HIDE_UNTIL_KEY = 'pw_popup_hide_until';
+
+function rememberPopupForDays(days) {
+  try {
+    const hideUntil = Date.now() + (days * 24 * 60 * 60 * 1000);
+    localStorage.setItem(POPUP_HIDE_UNTIL_KEY, String(hideUntil));
+  } catch (error) {
+    /* Storage may be unavailable in private/restricted contexts. */
+  }
+}
+
+function shouldHidePopup() {
+  try {
+    const hideUntil = Number(localStorage.getItem(POPUP_HIDE_UNTIL_KEY) || 0);
+    if (hideUntil > Date.now()) return true;
+    if (hideUntil) localStorage.removeItem(POPUP_HIDE_UNTIL_KEY);
+  } catch (error) {
+    /* Storage may be unavailable in private/restricted contexts. */
+  }
+  return false;
+}
+
+function closePopup(days = 30) {
   const overlay = document.getElementById('popupOverlay');
   overlay.classList.remove('open');
   overlay.setAttribute('aria-hidden', 'true');
   document.body.style.overflow = '';
-  try { sessionStorage.setItem('pw_popup', '1'); } catch (error) { /* Storage may be unavailable in private/restricted contexts. */ }
+  rememberPopupForDays(days);
 }
 
 function checkPopupClose(event) {
@@ -900,7 +932,7 @@ async function doPopup(event) {
     const mainForm = document.querySelector('.email-form');
     if (mainForm) mainForm.style.display = 'none';
     setStatus('emailStatus', 'success', "🎉 You're on the list! Watch your inbox.");
-    setTimeout(closePopup, 2200);
+    setTimeout(() => closePopup(365), 2200);
   } catch (error) {
     console.error(error);
     setStatus('popupStatus', 'error', '⚠️ We could not save your email. Please try again.');
@@ -928,8 +960,7 @@ document.addEventListener('keydown', event => {
 });
 
 document.getElementById('copyrightYear').textContent = new Date().getFullYear();
-let popupAlreadySeen = false;
-try { popupAlreadySeen = Boolean(sessionStorage.getItem('pw_popup')); } catch (error) { popupAlreadySeen = false; }
+const popupAlreadySeen = shouldHidePopup();
 if (!popupAlreadySeen) setTimeout(openPopup, 18000);
 
 Promise.allSettled([loadProducts(), loadEvents(), loadSettings()]);
