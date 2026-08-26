@@ -4,5 +4,17 @@
   "about1": "I'm a retired teacher, and pottery became my second calling. My dog Feebie had a beat-up plastic dish that simply did not suit her personality. So I made her a proper one — hand-thrown, glazed in her colors, with her name on it. She probably didn't notice. But the neighbors did.",
   "about2": "Soon I was making \"grand-dog\" Christmas gifts for the whole street. Pawtery grew from there — dishes, mugs, and whatever else inspires me at the wheel.",
   "announcement": "🎨 Custom orders open · Order yours today · Ships nationwide via USPS",
-  "turnaround": "approximately 6 weeks"
+  "turnaround": "approximately 6 weeks",
+  "hero_left": {
+    "image": "https://static.wixstatic.com/media/7b9876_361c9eaf13ec4b148ceee6c563cdd6dc~mv2.jpeg/v1/fit/w_900,h_900,q_90/7b9876_361c9eaf13ec4b148ceee6c563cdd6dc~mv2.jpeg",
+    "caption": "Whimsical Dog Mugs"
+  },
+  "hero_center": {
+    "image": "https://static.wixstatic.com/media/7b9876_6e5a8285c89c47689af8acc3f4f47bc5~mv2_d_4032_3024_s_4_2.jpg/v1/fill/w_614,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5810_JPG.jpg",
+    "caption": "One-of-a-Kind Pieces"
+  },
+  "hero_right": {
+    "image": "https://static.wixstatic.com/media/7b9876_42e43f6836204b9c9401d38bf2701fcf~mv2.jpg/v1/crop/x_0,y_0,w_640,h_352/fill/w_654,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/7b9876_42e43f6836204b9c9401d38bf2701fcf~mv2.jpg",
+    "caption": "Personalized Pet Dishes"
+  }
 }
