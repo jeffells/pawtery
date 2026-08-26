@@ -1,0 +1,221 @@
+backend:
+  name: git-gateway
+  branch: testing
+
+site_url: https://pawtery.shop
+display_url: https://pawtery.shop
+
+# Keep editing focused on simple forms rather than a technical preview pane.
+editor:
+  preview: false
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    description: "Click a product below to edit it, or click New Product to add one. When you're finished, use the publishing button at the top. The website updates automatically after Netlify finishes deploying."
+    folder: "products"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    identifier_field: "name"
+    slug: "{{slug}}"
+    summary: "{{name}} — {{price}}"
+    sortable_fields: ["order", "name", "commit_date"]
+    fields:
+      - label: "1. Product Name"
+        name: "name"
+        widget: "string"
+        hint: "The name customers see on the website. Edit any fields you need below, then use the publishing button at the top when you're finished."
+
+      - label: "2. Product Photo"
+        name: "photo"
+        widget: "image"
+        choose_url: false
+        allow_multiple: false
+        media_library:
+          config:
+            multiple: false
+        hint: "Click Choose different image to upload a new photo or select one already saved. Square photos work best."
+
+      - label: "3. Price Shown on Website"
+        name: "price"
+        widget: "string"
+        hint: "Examples: From $25, $35, or Price Varies."
+
+      - label: "4. Extra Price Information (Optional)"
+        name: "price_note"
+        widget: "string"
+        required: false
+        hint: "Only use this when helpful. Examples: · price varies by size, · per cup, or · quoted per project."
+
+      - label: "5. Corner Label / Badge (Optional)"
+        name: "badge"
+        widget: "string"
+        required: false
+        hint: "Optional label shown in the upper-left corner of the product photo. Change the wording to anything you want, or leave this completely blank to remove the label. Examples: ⭐ Bestseller, ☕ Popular, 🎁 Gift Favorite, 🐱 For Cats, ✏️ Custom."
+
+      - label: "6. Short Description"
+        name: "snippet"
+        widget: "string"
+        hint: "One short sentence shown directly under the product name on the homepage."
+
+      - label: "7. Full Description / Story"
+        name: "story"
+        widget: "text"
+        hint: "Customers see this after they click the product. Two or three sentences usually works well."
+
+      - label: "8. Product Details / Features"
+        name: "details_text"
+        widget: "text"
+        hint: "Put ONE detail on each line. Example: 📏 Sizes: Small, Medium, Large. These lines appear as the product details on the website."
+
+      - label: "9. Show This Product on the Website?"
+        name: "visible"
+        widget: "boolean"
+        default: true
+        hint: "ON = customers can see it. OFF = keep it saved here but hide it from the public website."
+
+      - label: "10. Display Order (Usually Leave This Alone)"
+        name: "order"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        default: 99
+        hint: "You normally do not need to change this. Lower numbers appear earlier on the homepage. A new product can stay at 99 and will appear near the end."
+
+  - name: "events"
+    label: "Events & Markets"
+    label_singular: "Event"
+    description: "Click an event to edit it, or click New Event to add one. Past dates automatically disappear from the public website."
+    folder: "events"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    identifier_field: "name"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date | date('MMM D, YYYY')}} — {{name}}"
+    sortable_fields: ["date", "name", "commit_date"]
+    fields:
+      - label: "1. Event Name"
+        name: "name"
+        widget: "string"
+        hint: "Example: Winter Park Art Festival"
+
+      - label: "2. Event Date"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: true
+
+      - label: "3. Location"
+        name: "location"
+        widget: "string"
+        hint: "Venue, city, or market location."
+
+      - label: "4. Time / Booth / Extra Details (Optional)"
+        name: "notes"
+        widget: "string"
+        required: false
+        hint: "Example: 9 AM–2 PM · Booth #14"
+
+      - label: "5. Show This Event on the Website?"
+        name: "visible"
+        widget: "boolean"
+        default: true
+        hint: "Turn this off if you want to save the event without showing it publicly yet."
+
+  - name: "settings"
+    label: "Website Settings"
+    description: "Update Pawtery's contact information, announcement bar, turnaround time, and About Us text."
+    files:
+      - label: "Edit Website Information"
+        name: "website"
+        file: "data/settings.json"
+        editor:
+          preview: false
+        fields:
+          - label: "Contact Email"
+            name: "email"
+            widget: "string"
+            hint: "Email address customers see on the website. If this changes, ask the site administrator to update the contact-form notification address too."
+
+          - label: "Facebook Page"
+            name: "facebook"
+            widget: "string"
+            hint: "Paste the full Facebook page address."
+
+          - label: "Announcement Bar"
+            name: "announcement"
+            widget: "string"
+            hint: "The short message across the very top of the homepage. Keep the words ‘Order yours today’ if you want that phrase to remain clickable."
+
+          - label: "Custom Order Turnaround"
+            name: "turnaround"
+            widget: "string"
+            hint: "Example: approximately 6 weeks"
+
+          - label: "About Us — First Paragraph"
+            name: "about1"
+            widget: "text"
+
+          - label: "About Us — Second Paragraph"
+            name: "about2"
+            widget: "text"
+
+          - label: "Homepage Feature Photo 1 — Left / Mobile"
+            name: "hero_left"
+            widget: "object"
+            collapsed: false
+            hint: "This is the left photo on computers and the feature photo customers see on phones. Wide landscape photos work best."
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                choose_url: false
+                allow_multiple: false
+                hint: "Upload a new photo or choose one already saved."
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                hint: "Short label shown over the bottom of the photo. Example: Whimsical Dog Mugs."
+
+          - label: "Homepage Feature Photo 2 — Center"
+            name: "hero_center"
+            widget: "object"
+            collapsed: false
+            hint: "Center feature photo on computers. Wide landscape photos work best."
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                choose_url: false
+                allow_multiple: false
+                hint: "Upload a new photo or choose one already saved."
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                hint: "Short label shown over the bottom of the photo."
+
+          - label: "Homepage Feature Photo 3 — Right"
+            name: "hero_right"
+            widget: "object"
+            collapsed: false
+            hint: "Right feature photo on computers. Wide landscape photos work best."
+            fields:
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                choose_url: false
+                allow_multiple: false
+                hint: "Upload a new photo or choose one already saved."
+              - label: "Caption"
+                name: "caption"
+                widget: "string"
+                hint: "Short label shown over the bottom of the photo."
