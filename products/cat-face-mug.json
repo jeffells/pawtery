@@ -1,12 +1,12 @@
 {
-  "name": "Cat Face Mug",
-  "photo": "https://static.wixstatic.com/media/7b9876_aac43129c4984a19be2f7e034395ad25~mv2.jpeg/v1/crop/x_0,y_504,w_3024,h_3024/fill/w_700,h_700,al_c,q_90/7b9876_aac43129c4984a19be2f7e034395ad25~mv2.jpeg",
-  "price": "From $28",
-  "price_note": "· $35 complex designs",
-  "badge": "🐈 Cat Person",
-  "snippet": "For the cat person who wants everyone to know it.",
-  "story": "I sculpt and paint each one of these individually, trying to capture that look cats have perfected — slightly amused, slightly judgmental, entirely themselves. These are for the people who want everyone to know exactly where their loyalties lie. A cup that looks back at you.",
-  "details_text": "☕ Size: Standard mug, ~12 oz\n🎨 Style: Hand-sculpted cat face, hand-painted glaze\n🍽️ Safety: Food safe, dishwasher safe\n⏱️ Turnaround: ~6 weeks\n📦 Shipping: Carefully packed, ships nationwide",
+  "badge": " Best Seller",
+  "price_note": "Price differs according to size",
+  "price": "From $60",
+  "details_text": "☕ Size: 10 inches, 14 inches\n🎨 Style: Hand-formed leaves, star, base\n🍽️ Safety: N/A  but heavy\n⏱️ Turnaround: ~6 weeks\nNot available for shipping",
+  "name": "Christmas Trees",
+  "order": 50,
   "visible": true,
-  "order": 50
+  "photo": "/uploads/christmas-shelf-decor-layout.jpg",
+  "story": "Each of these trees is painstakingly hand -made and dipped in rich glazes, perfect for your Christmas display. \n",
+  "snippet": "A little decor--it can't all be dogs and cats!"
 }
