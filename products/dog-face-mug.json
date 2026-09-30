@@ -1,12 +1,12 @@
 {
-  "name": "Dog Face Mug",
-  "photo": "https://static.wixstatic.com/media/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg/v1/fill/w_700,h_700,al_c,q_90/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg",
-  "price": "From $28",
-  "price_note": "· $35 complex designs",
   "badge": "☕ Popular",
-  "snippet": "A whimsical mug that starts every morning with a smile.",
-  "story": "I hand-sculpt every one of these — ears, snout, the whole personality. No two are exactly alike because I paint each one by hand. They make even Monday mornings something to look forward to, and they're my most popular gift item by far. Honestly, I'd keep every one I make.",
-  "details_text": "☕ Size: Standard mug, ~12 oz\n🎨 Style: Hand-sculpted face, hand-painted glaze\n🍽️ Safety: Food safe, dishwasher safe\n⏱️ Turnaround: ~6 weeks\n🎁 Great for: Dog lovers, birthdays, holidays",
+  "price_note": "· $35 complex designs",
+  "price": "From $30",
+  "details_text": "☕ Size: Standard mug, ~12 oz\n🎨 Style:  hand-painted glaze\n🍽️ Safety: Food safe, dishwasher safe\n⏱️ Turnaround: ~6 weeks\n🎁 Great for: Dog lovers, birthdays, holidays",
+  "name": "Dog Face Mug",
+  "order": 30,
   "visible": true,
-  "order": 30
+  "photo": "https://static.wixstatic.com/media/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg/v1/fill/w_700,h_700,al_c,q_90/7b9876_3ad02e128ad04a858e3c2d129d19a195~mv2.jpeg",
+  "story": "Pup on the side:  a sweet companion for your morning joe or cup of tea.  Send me a photo and I will hand paint a likeness of your special furry friend,  a spaniel, a doodle or a bully mix--it's all up to you!",
+  "snippet": "A whimsical mug that starts every morning with a smile."
 }
